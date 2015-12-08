@@ -1,3 +1,6 @@
+// File: Main.java
+// Author: Jack K. Seaton (310) 896-6050
+
 package com.appdetex.sampleparserjavaproject;
 
 import java.io.IOException;
@@ -74,7 +77,7 @@ public class Main
 	 * @param title - The Elements that contain the title ("h1.document-title")
 	 * @return - Returns the app's title as a String.
 	 */
-	public static String getPassedTitle(Elements title)
+	protected static String getPassedTitle(Elements title)
 	{
         return title.text();
 	}
@@ -88,7 +91,7 @@ public class Main
 	 * @param description - the elements that contain the app's description ("div[jsname]")
 	 * @return - the description of the app as a String in the format specified in the initial project
 	 */
-	public static String getPassedDescription(Elements description)
+	protected static String getPassedDescription(Elements description)
 	{		
         Element HTMLdesc = null;
 
@@ -143,7 +146,7 @@ public class Main
 	 * @param publisher - The element that contains the publisher. ex: ("span[itemprop]").first()	 
 	 * @return - Returned with the Publisher who is offering the App on the GooglePlayStore
 	 */
-	private static String getPassedPublisher(Element publisher) 	
+	protected static String getPassedPublisher(Element publisher) 	
 	{
 		return publisher.text();
 	}
@@ -157,7 +160,7 @@ public class Main
 	 * @return - Returns the price of the app as a String. If the app is free $0.00 will be returned. Otherwise, the price 
 	 *           is pulled from the GooglePlayStore HTML code.
 	 */
-	private static String getPassedPrice(Elements price) 
+	protected static String getPassedPrice(Elements price) 
 	{
 		// The cost of the app that will eventually be returned.
 		String appCost = null;
@@ -195,7 +198,7 @@ public class Main
 	 * @param rating - The elements that contain the App's Average Rating
 	 * @return - The average rating of the app as a String.
 	 */
-	public static String getPassedRating(Elements rating)
+	protected static String getPassedRating(Elements rating)
 	{
 	    return rating.text();
 	}	
