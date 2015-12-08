@@ -64,8 +64,7 @@ public class Main
         tester.setAppRating(getPassedRating(ratingHTML));
         
         tester.printJSON();
-       // nullTester.printJSON();        
-    	    	         
+
     } // End of main method
 	
 	
@@ -77,7 +76,7 @@ public class Main
 	 */
 	public static String getPassedTitle(Elements title)
 	{
-        return title.text();
+            return title.text();
 	}
 	
 	
@@ -91,11 +90,11 @@ public class Main
 	 */
 	public static String getPassedDescription(Elements description)
 	{		
-        Element HTMLdesc = null;
+        	Element HTMLdesc = null;
 
-        // Loop through every passed element looking for the element containing the attribute jsname = "C4s9Ed"
+	    // Loop through every passed element looking for the element containing the attribute jsname = "C4s9Ed"
 	    for (Element link : description) 
-        {
+	    {
         	String jsname = link.attr("jsname");
         	
         	// Prints out almost only the HTML of the desc, but with still some undesired syntax
@@ -104,7 +103,7 @@ public class Main
         		HTMLdesc = link;        		
         		break;
         	}        	        	        	
-        }	    
+           }	    
 	    
 	    // Saves the HTML code as a String to be manipulated via removeAll()
 	    String HTMLstring = HTMLdesc.toString();
