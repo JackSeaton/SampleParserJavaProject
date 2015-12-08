@@ -131,7 +131,11 @@ public class GooglePlayStoreObject
 	
 
 	/**
+	 * 	Prints out the information for the app in the specified JSON format.
 	 * 
+	 * 	NOTE: By default each of these fields are set to null, however, null 
+	 * 	should not print out as that would entail an unsuccessful attempt at finding 
+	 * 	the app's information.
 	 */
 	protected void printJSON()
 	{
