@@ -1,6 +1,3 @@
-// File: Main.java
-// Author: Jack K. Seaton (310) 896-6050
-
 package com.appdetex.sampleparserjavaproject;
 
 import java.io.IOException;
@@ -40,8 +37,7 @@ public class Main
     	}   
     	
     	// Creates both the tester app, and the nullTester so I can see if the MyApp is working correctly
-    	GooglePlayStoreObject tester = new GooglePlayStoreObject(); 
-    	GooglePlayStoreObject nullTester = new GooglePlayStoreObject();    	
+    	GooglePlayStoreObject testerApp = new GooglePlayStoreObject(); 
     	      
         // Gets the name of the App
         Elements titleHTML = doc.select("h1.document-title");
@@ -60,13 +56,13 @@ public class Main
 
                         
         // Sets all the values for the app
-        tester.setAppTitle(getPassedTitle(titleHTML));
-        tester.setAppDescription(getPassedDescription(descriptionHTML));
-        tester.setAppPublisher(getPassedPublisher(publisherHTML));
-        tester.setAppPrice(getPassedPrice(priceHTML)); 
-        tester.setAppRating(getPassedRating(ratingHTML));
+        testerApp.setAppTitle(getPassedTitle(titleHTML));
+        testerApp.setAppDescription(getPassedDescription(descriptionHTML));
+        testerApp.setAppPublisher(getPassedPublisher(publisherHTML));
+        testerApp.setAppPrice(getPassedPrice(priceHTML)); 
+        testerApp.setAppRating(getPassedRating(ratingHTML));
         
-        tester.printJSON();
+        testerApp.printJSON();
         
     } // End of main method
 	
